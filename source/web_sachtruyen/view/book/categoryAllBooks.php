@@ -1,3 +1,11 @@
+<?php
+    // $href_docsach
+    // if chua loggin 
+    //$href_themVaoTuSach = link login
+    // if đã loggin
+    //$href_themVaoTuSach = link hien thi tu sach
+    $href_docsach = "#";
+?>
 <div class="col-6 mt-3">
     <div class="storybook-view-1 row">
         <div class="col-7">
@@ -5,7 +13,7 @@
         </div>
         <div class="new-story__content col-5 ml--5 mt-3">
             <p>
-                <a href="" class="name fw-bold text-decoration-none text-black"><?php echo $sach->ten; ?></a>    
+                <a href="$href_docsach" class="name fw-bold text-decoration-none text-black"><?php echo $sach->ten; ?></a>    
             </p>
             <span class="auth"><?php echo $sach->tacGia; ?></span>
             <span class="category"><?php echo $sach->theLoai; ?></span>

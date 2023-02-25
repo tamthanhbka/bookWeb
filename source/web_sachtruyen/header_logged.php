@@ -1,6 +1,8 @@
+<!-- Trang chủ sau khi đăng nhập thành công -->
 <?php
-    // TODO $href_loggin = "link Login"
-    $href_loggin = "#"
+    // TODO
+    // Gán Username cho t nhé
+    // $userName = " "
 ?>
 <header>
     <div class="row header">
@@ -31,9 +33,9 @@
                     </a>
                 </div>
                 <div class="col mt-4">
-                    <a href="<?php echo $href_loggin?>" class="header-signin">
+                    <a href="" class="header-signin">
                         <img src="images/header/icon-user.svg" alt="">
-                        Đăng nhập
+                        <?php echo $userName;?>
                     </a>
                 </div>
             </div>

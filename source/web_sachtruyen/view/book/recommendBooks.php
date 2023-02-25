@@ -1,14 +1,18 @@
+<?php
+    //  $href_docsach = link den chi tiet sach
+    $href_docsach = "#";
+?>
 <!-- List 2 -->
 <div class="recommended-book col-6 py-3">
     <div class="row">
         <div class="recommend-book1__header col-4">
-            <a href="">
+            <a href="<?php $href_docsach?>">
                 <img src="<?php echo $sach->URLbiaSach; ?>" class="card-img-top" alt="...">
             </a>
         </div> 
         <div class="recommend-book1__header__title col-8">
             <div class="fs-3">
-                <a href="" class="no-decoration">
+                <a href="<?php $href_docsach?>" class="no-decoration">
                     <?php echo $sach->ten; ?>
                 </a>
             </div>
