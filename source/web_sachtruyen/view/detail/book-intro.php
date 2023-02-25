@@ -3,7 +3,7 @@
     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 book-intro-main">
         <div class="row book-intro-content">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 book-cover">
-                <img src="../../images/biasach/<?php echo $sach->URLbiaSach; ?>" alt="cover-book1">
+                <img src="<?php echo $sach->URLbiaSach; ?>" alt="cover-book1">
             </div>
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 book-info">
                 <div class="row book-name">
