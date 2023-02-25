@@ -1,5 +1,6 @@
 <?php
-include '../../config/config.php';
+// include ('..\..\config\config.php');
+require_once(__DIR__."\..\..\config\config.php");
 class Sach
 {
     public $id;
@@ -38,7 +39,7 @@ class Sach
         $this->theLoai = $theLoai;
         $this->moTa = $moTa;
     }
-
+ 
     public static function findById(int $id): self
     {
         $record =  Database::getInstance()->query("SELECT * FROM sach WHERE ID = $id")[0];
@@ -68,6 +69,16 @@ class Sach
         }
         return $records;
     }
+    public static function getAllBooks():array
+    {
+        $result = Database::getInstance()->query("SELECT * FROM sach limit 5");
+        $records = array();
+        foreach ($result as $record) {
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7], $record[8], $record[9], $record[10]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
 }
 class Chuong
 {
@@ -81,7 +92,7 @@ class Chuong
         $this->chiSo = $chiSo;
         $this->noiDung = $noiDung;
     }
-
+ 
     public static function findById(int $Sachid, int $chiSo): Chuong
     {
         $records = Database::getInstance()->query("SELECT * FROM chuong WHERE SachID = $Sachid and ChiSoChuong = $chiSo");
