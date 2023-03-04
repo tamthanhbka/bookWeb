@@ -23,7 +23,9 @@
         include("header.php");
     ?>
     <!-- Body -->
-    <div class="body">
+    <div class="body row">
+        <!-- <div class="col-1 body"></div> -->
+        <!-- Slider -->
         <?php 
             include("slider.php");
         ?>
@@ -31,21 +33,23 @@
         <div class="hot-book__name my-2"> 
                     <img src="images/miniLogo/icon.svg" alt="">
                     Truyện HOT tuần qua 
-                </div>
+        </div>
         <!-- Hot book -->
-        <div class="hot-book py-3">
-            <div class="row">
-                <!-- List HOT Books -->
-                <?php
-                    // include("config/config.php");
-                    include("model/sach/Sach.php");
-                    
-                    $sachs = Sach::getAllBooks();
-                    foreach ($sachs as $sach) {
-                        include("view/book/hotBooks.php");
-                    }
-                ?>
-                <!-- End list HOT Book -->
+        <div class="row ">
+            <div class="hot-book py-3 rounded">
+                <div class="row ">
+                    <!-- List HOT Books -->
+                    <?php
+                        // include("config/config.php");
+                        include("model/sach/Sach.php");
+                        
+                        $sachs = Sach::getAllBooks();
+                        foreach ($sachs as $sach) {
+                            include("view/book/hotBooks.php");
+                        }
+                    ?>
+                    <!-- End list HOT Book -->
+                </div>
             </div>
         </div>
 
@@ -93,11 +97,11 @@
                     LTWeb đề cử
         </div>
         <!-- LTWeb Recommend -->
-        <div class="admin-recommend pt-2">
+        <div class="admin-recommend pt-2 rounded">
             <div class="row">
                 <div class="mt-3 col-3">
                     <a href="" class="no-decoration">
-                        <img src="images/hotBooks/3.jpg" alt="" class="col-12">
+                        <img src="images/hotBooks/3.jpg" alt="" class="col-12 rounded">
                     </a>
                 </div>
 

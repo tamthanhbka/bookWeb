@@ -3,11 +3,11 @@
     $href_docsach = "#";
 ?>
 <!-- List 2 -->
-<div class="recommended-book col-6 py-3">
+<div class="recommended-book col-6 py-3 rounded ">
     <div class="row">
         <div class="recommend-book1__header col-4">
             <a href="<?php $href_docsach?>">
-                <img src="<?php echo $sach->URLbiaSach; ?>" class="card-img-top" alt="...">
+                <img src="<?php echo $sach->URLbiaSach; ?>" class="card-img-top rounded " alt="...">
             </a>
         </div> 
         <div class="recommend-book1__header__title col-8">

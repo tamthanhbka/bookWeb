@@ -10,7 +10,9 @@
     <div class="card">
         <a href="<?php echo $href; ?>" class="select-book">
             <img src="<?php echo $sach->URLbiaSach; ?>" class="card-img-top" alt="...">
-            <div class="card-title mt-2 ms-3 mb-0"><?php echo $sach->ten; ?></div>
+            <div class="d-inline-block text-truncate card-title mt-2 ms-3 mb-0" style="max-width: 150px;">
+                <?php echo $sach->ten; ?>
+            </div>
         </a>
         <div class="card-body">
             

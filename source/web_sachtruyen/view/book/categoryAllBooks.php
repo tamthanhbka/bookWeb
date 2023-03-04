@@ -13,7 +13,12 @@
         </div>
         <div class="new-story__content col-5 ml--5 mt-3">
             <p>
-                <a href="$href_docsach" class="name fw-bold text-decoration-none text-black"><?php echo $sach->ten; ?></a>    
+                <a href="$href_docsach" 
+                    class="d-inline-block text-truncate name fw-bold text-decoration-none text-black"
+                    style="max-width: 150px;"
+                >
+                    <?php echo $sach->ten; ?>
+                </a>    
             </p>
             <span class="auth"><?php echo $sach->tacGia; ?></span>
             <span class="category"><?php echo $sach->theLoai; ?></span>
