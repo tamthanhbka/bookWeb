@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 // $href_docsach
 // if chua loggin 
 //$href_themVaoTuSach = link login
@@ -7,15 +6,6 @@
 //$href_themVaoTuSach = link hien thi tu sach
 $href_docsach = "#";
 $href = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
-=======
-    // $href_docsach
-    // if chua loggin 
-    //$href_themVaoTuSach = link login
-    // if đã loggin
-    //$href_themVaoTuSach = link hien thi tu sach
-    $href_docsach = "#";
-    $href = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
->>>>>>> main
 ?>
 <div class="col-2">
     <div class="card">
@@ -26,9 +16,4 @@ $href = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
             </div>
         </a>
     </div>
-<<<<<<< HEAD
 </div>
-=======
-</div>
-
->>>>>>> main
