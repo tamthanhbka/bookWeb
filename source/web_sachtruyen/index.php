@@ -10,24 +10,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/listbook.css">
     <script>
         const $ = document.querySelector.bind(document);
     </script>
-    <!-- <base href="web_sachtruyen"> -->
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- Header -->
-    <?php 
-        // if
-        include("header.php");
+    <!-- Include Model -->
+    <?php
+        include("model/sach/Sach.php");
     ?>
+    <!-- Header -->
+    <?php
+        // if
+        include("view/header/header.php");
+    ?>
+    
+    <!-- Nav bar -->
+    <?php 
+        include("view/header/navbar.php");
+    ?>
+
     <!-- Body -->
-    <div class="body row">
-        <!-- <div class="col-1 body"></div> -->
+    <div id="body" class="body row">
         <!-- Slider -->
         <?php 
-            include("slider.php");
+            include("view/body/slider.php");
         ?>
 
         <div class="hot-book__name my-2"> 
@@ -40,9 +51,7 @@
                 <div class="row ">
                     <!-- List HOT Books -->
                     <?php
-                        // include("config/config.php");
-                        include("model/sach/Sach.php");
-                        
+                        // include("config/config.php");                        
                         $sachs = Sach::getAllBooks();
                         foreach ($sachs as $sach) {
                             include("view/book/hotBooks.php");
@@ -58,7 +67,7 @@
             <div class="row">
                 <div class="hot-book__name my-2"> 
                     <img src="images/miniLogo/icon.svg" alt="">
-                    TOP truyện đề cử 
+                    TOP truyện được yêu thích
                 </div>
                 
                 <?php
@@ -123,9 +132,17 @@
 
     <!-- Footer -->
     <?php 
-        include("footer.php");
+        include("view/footer/footer.php");
     ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <!-- <script>
+        $(document).ready(function(){
+            $("a.nav-link").click(function(){
+                alert(this.href);
+                return false;
+            });
+        });
+    </script> -->
 </body>
 </html>

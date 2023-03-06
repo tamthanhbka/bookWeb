@@ -1,6 +1,6 @@
 <?php
     // if(1)$href_docsach = link den trang doc sach;
-    $href_docsach = "#";
+    $href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
     // 
 ?>
 <div class="recommended-book col-6 py-3 rounded">
@@ -12,18 +12,18 @@
         </div> 
         <div class="recommend-book1__header__title col-8">
             <div class="fs-5 mt-4">
-                <a href="<?php echo $href_docsach; ?>" class="no-decoration">
+                <a href="<?php echo $href_docsach; ?>" class="no-decoration name">
                     <?php echo $sach->ten; ?>
                 </a>
             </div>
             <div class="fs-6 mt-3">
-                <a href="<?php echo $href_docsach; ?>" class="no-decoration color-9">
+                <a href="<?php echo $href_docsach; ?>" class="no-decoration color-9 name">
                     <?php echo $sach->tacGia; ?>
                 </a>
             </div>
 
             <div class="fs-6 mt-3">
-                <a href="<?php echo $href_docsach; ?>" class="no-decoration color-9">
+                <a href="<?php echo $href_docsach; ?>" class="no-decoration color-9 name">
                     <?php echo $sach->theLoai; ?>
                 </a>
             </div>

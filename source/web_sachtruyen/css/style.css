@@ -23,10 +23,6 @@ header {
   height: 20vh;
 }
 
-.header {
-  height: 15vh;
-}
-
 .logo {
   display: flex;
 }

@@ -9,7 +9,19 @@
 }
 
 .color-waka{
-    color: #6dae43;
+    color: #6dae43 !important;
+}
+
+.color-waka_hover:hover{
+    color:#6dae43 !important;
+}
+
+.color-black{
+    color:#000 !important
+}
+
+.color-black_hover:hover{
+    color: #000 !important;
 }
 
 .bc-category{
@@ -55,9 +67,7 @@
     overflow: hidden;
     box-shadow: 0 0 6px rgb(0 0 0 / 8%);
 }
-.text-black{
-    color: #000;
-}
+
 .auth,
 .category,
 .status,
