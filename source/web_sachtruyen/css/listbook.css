@@ -1,99 +1,109 @@
-.body{
-   background-color: rgba(0,0,0,.1);
+.body {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.bc-waka-hover:hover{
-    background-color: #6dae43 !important;   
+.bc-waka-hover:hover {
+  background-color: #6dae43 !important;
 }
-.bc-white{
-    background-color: #fff;
-}
-
-.color-waka{
-    color: #6dae43;
+.bc-white {
+  background-color: #fff;
 }
 
-.bc-category{
-    background-image: url(https://sangtac.waka.vn/images/bg-header-filter.png);
-}
-.selector-header{
-    text-align: center;
-    display: block;
+.color-waka {
+  color: #6dae43 !important;
 }
 
-.storybooks-sort-book{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    border-bottom: 1px solid rgba(0,0,0,.06)
+.color-waka_hover:hover {
+  color: #6dae43 !important;
 }
 
-.sort-action-item:hover{
-    color: #6dae43;
+.color-black {
+  color: #000 !important;
 }
 
-.border-none{
-    border: none;
+.color-black_hover:hover {
+  color: #000 !important;
 }
 
-.bc-cccc{
-    background-color: #CCCC;
+.bc-category {
+  background-image: url(https://sangtac.waka.vn/images/bg-header-filter.png);
+}
+.selector-header {
+  text-align: center;
+  display: block;
 }
 
-.ml--5{
-    margin-left: -5px;
+.storybooks-sort-book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.storybook-view-1, 
+.sort-action-item:hover {
+  color: #6dae43;
+}
+
+.border-none {
+  border: none;
+}
+
+.bc-cccc {
+  background-color: #cccc;
+}
+
+.ml--5 {
+  margin-left: -5px;
+}
+
+.storybook-view-1,
 .story-img,
-.addbook{
-    background-color: #cccdcc;
-    border-radius: 15px;
-    border: none;
-    top: -40px;
-    left: 0;
-    overflow: hidden;
-    box-shadow: 0 0 6px rgb(0 0 0 / 8%);
+.addbook {
+  background-color: #cccdcc;
+  border-radius: 15px;
+  border: none;
+  top: -40px;
+  left: 0;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgb(0 0 0 / 8%);
 }
-.text-black{
-    color: #000;
-}
+
 .auth,
 .category,
 .status,
-.addbook{
-    color: #b2b2b2;
-    margin-bottom: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 18px;
-    -webkit-line-clamp: 1;
-    max-height: 18px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    visibility: visible;
-    word-break: break-all;
+.addbook {
+  color: #b2b2b2;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 18px;
+  -webkit-line-clamp: 1;
+  max-height: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  visibility: visible;
+  word-break: break-all;
 }
 
 .auth:hover,
 .category:hover,
-.name:hover{
-    color: #6dae43 !important;
-    cursor: pointer;
+.name:hover {
+  color: #6dae43 !important;
+  cursor: pointer;
 }
 
-.status{
-    background-color: #ffe2e0;
-    color: #ff3b30;
+.status {
+  background-color: #ffe2e0;
+  color: #ff3b30;
 }
 
-.addbook{
-    text-align: center;
-    background-color: #6dae43;
-    color: #000;
+.addbook {
+  text-align: center;
+  background-color: #6dae43;
+  color: #000;
 }
 
-.addbook:hover{
-    opacity: 0.9;
-    cursor: pointer;
+.addbook:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }

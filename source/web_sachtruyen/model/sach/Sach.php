@@ -79,6 +79,26 @@ class Sach
         }
         return $records;
     }
+    public static function getBooksByCategory($theLoai): array
+    {
+        $result = Database::getInstance()->query("SELECT * from sach WHERE TheLoai = '$theLoai'");
+        $records = array();
+        foreach ($result as $record) {
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7], $record[8], $record[9], $record[10]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
+    public static function getAllCategory(): array
+    {
+        $result = Database::getInstance()->query("SELECT DISTINCT TheLoai FROM sach");
+        $records = array();
+        foreach ($result as $record) {
+            $temp = $record[0];
+            array_push($records, $temp);
+        }
+        return $records;
+    }
 }
 class Chuong
 {
