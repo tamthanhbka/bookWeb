@@ -16,83 +16,28 @@
     </head>
 
     <body>
-        <header>
-            <div class="row header">
-                <!-- Logo -->
-                <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo">
-                    <a href="index.php">
-                        <img class="col-9" src="images/logo/main-logo.jpg" alt="main-logo">
-                    </a>
-                </div>
-                <!-- Search -->
-                <div class="col-md-6"> 
-                    <div class="search-box mt-4"> 
-                        <div class="row">
-                            <form class="search-form" action="#"> 
-                                <input class="form-control input col-5" placeholder="Nhập tên sách, tác giả.." type="text"> 
-                                <button class="btn btn-link search-btn col-1"> 
-                                    <i class="bi bi-search"></i> 
-                                </button> 
-                            </form> 
-                        </div>
-                    </div> 
-                </div> 
-                <!-- Đăng nhập -->
-                <div class="header-button col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <div class="row">
-                        <div class=" col mt-4">
-                            <a href="#" class="color-waka upgrade-author">
-                                <img src="images/header/upgrade-author.png" alt="">
-                                Trở thành tác giả
-                            </a>
-                        </div>
-                        <div class="col mt-4">
-                            <a href="" class="color-waka header-signin">
-                                <img src="images/header/icon-user.svg" alt="">
-                                Đăng nhập
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Nav bar -->
-            <div class="header-nav">
-                <ul class="nav nav-tabs border border-success border-end-0 border-bottom-0 border-start-0 border-2 mb-2">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle color-waka" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Thể loại</a>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item color-waka" href="#">Truyện dài</a></li>
-                            <li><a class="dropdown-item color-waka" href="#">Truyện ngắn</a></li>
-                            <li><a class="dropdown-item color-waka" href="#">Chuyện chữa lành</a></li>
-                            <!-- <li><hr class="dropdown-divider"></li> -->
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link color-waka" href="index1.php">Tất cả các truyện</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link color-waka" href="#">Truyện dài</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link color-waka" href="#">Truyện ngắn</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link color-waka" href="#">Truyện chữa lành</a>
-                    </li>
-                </ul>
-            </div>
-        </header> 
+        <!-- Include Model -->
+        <?php
+            include("model/sach/Sach.php");
+        ?>
+        <!-- Header -->
+        <?php 
+            // if
+            include("view/header/header.php");
+        ?>
         
+        <!-- Nav bar -->
+        <?php 
+            // if
+            include("view/header/navbar.php");
+        ?>
+
         <div class="row body">
             <!-- NAV Tree -->
             <div class="row mt-2">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="my-4 breadcrumb">
-                    <li class="breadcrumb-item"><a class="color-waka" href="#">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a class="color-waka" href="index.php">Trang chủ</a></li>
                     <li class="breadcrumb-item active color-waka" aria-current="page">Danh sách truyện</li>
                 </ol>
                 </nav>
@@ -115,18 +60,18 @@
                                 TẤT CẢ TRUYỆN
                             </button>
                         </div>
-                        <!-- Dropdown2 -->
-                        <div class="dropdown bc-white">
-                            <button class="bc-waka-hover col-12 bc-white text-black border border-light btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                TRUYỆN DÀI
-                            </button>
-                        </div>
-                        <!-- Dropdown 3 -->
-                        <div class="dropdown bc-white">
-                            <button class="bc-waka-hover col-12 bc-white text-black border border-light btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                TRUYỆN NGẮN
-                            </button>
-                        </div>        
+                        <?php
+                            $categories = Sach::getAllCategory();
+                            foreach ($categories as $category) {
+                                echo"
+                                    <div class=\"dropdown bc-white\">
+                                        <button class=\"bc-waka-hover col-12 bc-white text-black border border-light btn btn-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+                                            <span class=\"text-uppercase\" href=\"index1.php?TL=$category\">$category</span>
+                                        </button>
+                                    </div>
+                                ";
+                            }
+                        ?>       
                     </div>
                 </div>
                 <!-- Right -->
@@ -135,7 +80,17 @@
                     <div class="row">
                         <div class="hot-book__name my-2"> 
                         <img src="images/miniLogo/icon.svg" alt="">
-                        Tất cả truyện
+                        <?php  
+                            if(isset($_GET['TL'])==true) 
+                                $theLoai = $_GET['TL'];
+                            else 
+                                $theLoai = null;
+
+                            if ($theLoai == null)
+                                echo "Tất cả các truyện";
+                            else 
+                                echo "$theLoai";
+                        ?>
                         </div>  
                     </div>
                     <!-- sort-box -->
@@ -159,18 +114,24 @@
                             </div>
                         </div>
                     </div>
-
+ 
                     <!-- Storybook -->
                     <div class="row">
                         <?php
-                            include("model/sach/Sach.php");
-                            $sachs = Sach::getAllBooks();
+                            if(isset($_GET['TL'])==true) 
+                                $theLoai = $_GET['TL'];
+                            else 
+                                $theLoai = null;
+
+                            if ($theLoai == null)
+                                $sachs = Sach::getAllBooks();
+                            else 
+                                $sachs = Sach::getBooksByCategory($theLoai);
                             foreach ($sachs as $sach) {
                                 include("view/book/categoryAllBooks.php");
                             }
                         ?>                    
                     </div>
-                    
                 </div>
             </div>  
         </div>
