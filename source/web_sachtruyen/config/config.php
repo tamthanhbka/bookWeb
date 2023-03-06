@@ -5,7 +5,7 @@ class Database
     private static $database;
     private function __construct()
     {
-        $this->connect = mysqli_connect("localhost", "root", "Tamtam3012@@", "bookweb");
+        $this->connect = mysqli_connect("localhost", "root", "", "bookweb");
         if (!$this->connect) die("Could not connect to database");
     }
 

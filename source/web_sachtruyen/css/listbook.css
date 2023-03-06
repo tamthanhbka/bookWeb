@@ -107,3 +107,12 @@
   opacity: 0.9;
   cursor: pointer;
 }
+
+.icon{
+  color: #6dae43 !important;
+  opacity: .4;
+}
+
+.icon:hover{
+  opacity: 1;
+}

@@ -23,7 +23,7 @@ $href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
             </div>
 
             <div class="fs-6 mt-3">
-                <a href="<?php echo $href_docsach; ?>" class="no-decoration color-9 name">
+                <a href="http://127.0.0.1/web_sachtruyen/index1.php?TL=<?php echo $sach->theLoai; ?>" class="no-decoration color-9 name">
                     <?php echo $sach->theLoai; ?>
                 </a>
             </div>

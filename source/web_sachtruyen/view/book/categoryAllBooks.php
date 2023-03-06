@@ -19,7 +19,9 @@ $href_docsach = "#";
                 </a>
             </p>
             <span class="auth"><?php echo $sach->tacGia; ?></span>
-            <span class="category"><?php echo $sach->theLoai; ?></span>
+            <a href="http://127.0.0.1/web_sachtruyen/index1.php?TL=<?php echo $sach->theLoai; ?>" class="category no-decoration">
+                <?php echo $sach->theLoai; ?>
+            </a>
             <p class="description">
                 <?php echo $sach->moTa; ?>
             </p>

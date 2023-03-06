@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/listbook.css">
+
+    <!-- Icons-->
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.3.0-web/css/fontawesome.min.css">
     <script>
         const $ = document.querySelector.bind(document);
     </script>

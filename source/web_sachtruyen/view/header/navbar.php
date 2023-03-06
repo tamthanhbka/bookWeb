@@ -7,7 +7,7 @@
                         $categories = Sach::getAllCategory();
                         foreach ($categories as $category) {
                             echo"
-                                <li><a class=\"dropdown-item color-waka\" href=\"index1.php?TL=$category\">$category</a></li>
+                                <li><a class=\"dropdown-item color-waka\" href=\"http://127.0.0.1/web_sachtruyen/index1.php?TL=$category\">$category</a></li>
                             ";
                         }
                     ?>
@@ -16,14 +16,14 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link color-black" href="index1.php">Tất cả các truyện</a>
+                <a class="nav-link color-black" href="http://127.0.0.1/web_sachtruyen/index1.php">Tất cả các truyện</a>
             </li>
             <?php
                 $categories = Sach::getAllCategory();
                 foreach ($categories as $category) {
                     echo"
                         <li class=\"nav-item\">
-                            <a class=\"nav-link color-black\" href=\"index1.php?TL=$category\">$category</a>
+                            <a class=\"nav-link color-black\" href=\"http://127.0.0.1/web_sachtruyen/index1.php?TL=$category\">$category</a>
                         </li>
                     ";
                 }

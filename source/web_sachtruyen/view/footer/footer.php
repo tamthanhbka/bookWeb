@@ -2,7 +2,7 @@
         <div class="row .text-secondary-emphasis">
             <div class="col-6">
                 <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo">
-                    <img src="images/logo/main-logo.jpg" alt="main-logo">
+                    <img src="http://127.0.0.1/web_sachtruyen/images/logo/main-logo.jpg" alt="main-logo" class="rounded">
                 </div>
                 <div class="font-weight-medium">
                     Cơ quan chủ quản: <span class="fw-bolder">Tanhoang845 Development</span><br>

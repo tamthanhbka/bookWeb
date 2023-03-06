@@ -8,7 +8,7 @@
     <div class="row header">
         <!-- Logo -->
         <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo">
-            <img src="images/logo/main-logo.jpg" alt="main-logo">
+            <img src="http://127.0.0.1/web_sachtruyen/images/logo/main-logo.jpg" alt="main-logo">
         </div>
         <!-- Search -->
         <div class="col-md-6"> 
@@ -28,13 +28,13 @@
             <div class="row">
                 <div class=" col mt-4">
                     <a href="#" class="upgrade-author">
-                        <img src="images/header/upgrade-author.png" alt="">
+                        <img src="http://127.0.0.1/web_sachtruyen/images/header/upgrade-author.png" alt="">
                         Trở thành tác giả
                     </a>
                 </div>
                 <div class="col mt-4">
                     <a href="" class="header-signin">
-                        <img src="images/header/icon-user.svg" alt="">
+                        <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
                         <?php echo $userName;?>
                     </a>
                 </div>

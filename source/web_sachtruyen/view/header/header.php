@@ -6,8 +6,8 @@ $href_loggin = "#";
     <div class="row header">
         <!-- Logo -->
         <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo mt-3">
-            <a href="index.php">
-                <img class="col-10" src="../../images/logo/main-logo.jpg" alt="main-logo">
+            <a href="http://127.0.0.1/web_sachtruyen/index.php">
+                <img class="col-10" src="http://127.0.0.1/web_sachtruyen/images/logo/main-logo.jpg" alt="main-logo">
             </a>
         </div>
 
@@ -30,13 +30,13 @@ $href_loggin = "#";
             <div class="row">
                 <div class=" col mt-5">
                     <a href="#" class="upgrade-author name">
-                        <img src="images/header/upgrade-author.png" alt="">
+                        <img src="http://127.0.0.1/web_sachtruyen/images/header/upgrade-author.png" alt="">
                         Trở thành tác giả
                     </a>
                 </div>
                 <div class="col mt-5">
                     <a href="<?php echo $href_loggin ?>" class="header-signin name">
-                        <img src="images/header/icon-user.svg" alt="">
+                        <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
                         Đăng nhập
                     </a>
                 </div>
