@@ -1,5 +1,6 @@
 <?php
-include '../../config/config.php';
+// include ('..\..\config\config.php');
+require_once(__DIR__ . "\..\..\config\config.php");
 class Sach
 {
     public $id;
@@ -68,6 +69,16 @@ class Sach
         }
         return $records;
     }
+    public static function getAllBooks(): array
+    {
+        $result = Database::getInstance()->query("SELECT * FROM sach limit 5");
+        $records = array();
+        foreach ($result as $record) {
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7], $record[8], $record[9], $record[10]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
 }
 class Chuong
 {
@@ -95,11 +106,101 @@ class Chuong
     public static function findBySachId(int $id): array
     {
         $records = array();
-        $rerusl = Database::getInstance()->query("SELECT * FROM chuong WHERE SachID = $id");
-        foreach ($rerusl as $record) {
+        $result = Database::getInstance()->query("SELECT * FROM chuong WHERE SachID = $id");
+        foreach ($result as $record) {
             $chuong = new Chuong($record[0], $record[1], $record[2], $record[3], $record[4]);
             array_push($records, $chuong);
         }
         return $records;
+    }
+}
+
+class BinhLuan
+{
+    public $id, $noidung, $ngay, $idSach, $idChuong, $idNguoiDung;
+
+    public function __construct($id, $noidung, $ngay, $idSach, $idChuong, $idNguoiDung)
+    {
+        $this->id = $id;
+        $this->noidung = $noidung;
+        $this->ngay = $ngay;
+        $this->idSach = $idSach;
+        $this->idChuong = $idChuong;
+        $this->idNguoiDung = $idNguoiDung;
+    }
+
+    // public function __construct($sachID, $noiDung,)
+    // {
+    // }
+
+    public static function addCmtBySach(int $sachId, String $noiDung, int $idNguoiDung)
+    {
+        Database::getInstance()->insert("INSERT INTO binhluan (NoiDung, SachID, NguoiDungID) values ('$noiDung', $sachId, $idNguoiDung)");
+    }
+
+    public static function addCmtByChuong(int $sachId, int $chuongId, String $noiDung, int $idNguoiDung)
+    {
+        Database::getInstance()->insert("INSERT INTO binhluan (NoiDung, SachID, ChuongID, NguoiDungID) values ('$noiDung', $sachId, $chuongId, $idNguoiDung)");
+    }
+
+    public static function getCmtBySach(int $sachId): array
+    {
+        $records = array();
+        $result = Database::getInstance()->query("SELECT * FROM binhluan WHERE SachID = $sachId");
+        foreach ($result as $record) {
+            $cmt = new BinhLuan($record[0], $record[1], $record[2], $record[3], $record[4], $record[5]);
+            array_push($records, $cmt);
+        }
+        return $records;
+    }
+}
+
+class User
+{
+    public $id, $tenDN, $matKhau, $email, $SDT, $diem, $vaiTro, $URL;
+
+    public function __construct($id, $tenDN, $matKhau, $email, $SDT, $diem, $vaiTro, $URL)
+    {
+        $this->tenDN = $tenDN;
+        $this->id = $id;
+        $this->matKhau = $matKhau;
+        $this->email = $email;
+        $this->SDT = $SDT;
+        $this->diem = $diem;
+        $this->vaiTro = $vaiTro;
+        $this->URL = $URL;
+    }
+
+    public static function getUserById(int $id): User
+    {
+        $records = Database::getInstance()->query("SELECT * FROM nguoidung WHERE ID = $id");
+
+        if (!isset($records[0])) throw new Exception("Could not find Chapter");
+        else
+            $record = $records[0];
+        return new User($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7]);
+    }
+
+    public function setPoint(int $id, int $point)
+    {
+
+        Database::getInstance()->query("UPDATE nguoidung SET DiemTichLuy = ");
+    }
+}
+
+class OrderBook
+{
+    public $userId, $sachId, $date;
+
+    public function __construct($userId, $sachId, $date)
+    {
+        $this->userId = $userId;
+        $this->sachId = $sachId;
+        $this->date = $date;
+    }
+
+    public function addItem(OrderBook $order)
+    {
+        Database::getInstance()->query("INSERT INTO muasach (userId, sachId) values ($order->userId, $order->sachId)");
     }
 }

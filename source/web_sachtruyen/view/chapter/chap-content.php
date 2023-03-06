@@ -24,7 +24,9 @@ try {
                 ?>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-chapter-item ">
-                <p class="btn-green btn-show-list-chap">Chương <?= $_GET['chapId'] ?><i class="bi bi-chevron-compact-down icon-show-list-chap"></i></p>
+                <a href="#">
+                    <p class="btn-green btn-show-list-chap">Chương <?= $_GET['chapId'] ?><i class="bi bi-chevron-compact-down icon-show-list-chap"></i></p>
+                </a>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-chapter-item">
                 <?php

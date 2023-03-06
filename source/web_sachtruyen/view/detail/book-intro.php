@@ -3,7 +3,7 @@
     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 book-intro-main">
         <div class="row book-intro-content">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 book-cover">
-                <img src="../../images/biasach/<?php echo $sach->URLbiaSach; ?>" alt="cover-book1">
+                <img src="<?php echo $sach->URLbiaSach; ?>" alt="cover-book1">
             </div>
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 book-info">
                 <div class="row book-name">
@@ -22,14 +22,19 @@
                     <a href=""><?= $sach->theLoai; ?></a>
                 </div>
                 <div class="row book-desc">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 book-chap">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 book-chap">
                         <div class="row"><i class="bi bi-list-ul icon-book-desc"></i>Chương</div>
                         <div class="row number"><?php echo $sach->soChuong; ?></div>
                     </div>
 
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="row"><i class="bi bi-suit-heart icon-book-desc"></i>Theo dõi</div>
                         <div class="row number">102</div>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="row"><i class="bi bi-flower1 icon-book-desc"></i>Điểm</div>
+                        <div class="row number"><?= $sach->giaSach ?></div>
                     </div>
 
                 </div>
@@ -39,7 +44,12 @@
                             <a class="btn-green" href="<?= "/web_sachtruyen/view/chapter?id=" . $sach->id . "&chapId=" . $chuongs[0]->chiSo ?>">Đọc sách</a>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <a class="btn-green" href="#">Thêm vào tủ sách</a>
+                            <!-- <a id="add-book" class="btn-green" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Thêm vào tủ sách</a> -->
+                            <a id="add-book" class="btn-green" href="#">Thêm vào tủ sách</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 order-book">
+                            <!-- <a id="order-book" class="btn-green" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Mua sách</a> -->
+                            <a id="order-book" class="btn-green" href="#">Mua sách</a>
                         </div>
                     </div>
 

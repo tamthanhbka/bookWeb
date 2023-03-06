@@ -65,7 +65,7 @@ $sach = Sach::findById($_GET['id']);
     </header>
 
     <section>
-        <div class="row">
+        <div class=" row">
             <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 chapter">
                 <?php
@@ -86,7 +86,49 @@ $sach = Sach::findById($_GET['id']);
     <footer>
         <p>Day la footer</p>
     </footer>
+    <?php
+    $chuongs = Chuong::findBySachId($_GET['id']);
+    ?>
+    <div class=" row listchap disable">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 popup-listchap">
+            <div class="popup-header">
+                <h2> <i class="bi bi-list-stars"></i> Mục lục (<?= count($chuongs) ?> chương)</h2>
+                <i id="closePopup" class="bi bi-x-lg close-icon"></i>
+            </div>
+            <div class="row content popup">
+                <ul>
+                    <?php
+                    foreach ($chuongs as $chuong) { ?>
+                        <li class="" chapter-item>
+                            <a href="/web_sachtruyen/view/chapter?id=<?= $_GET['id'] ?>&chapId=<?= $chuong->chiSo ?>"><?= $chuong->tenChuong; ?></a>
+                            <span><?php echo (int)(strlen($chuong->noiDung) / 6) . " chữ"; ?></span>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+    </div>
 
 </body>
 
 </html>
+<script defer>
+    let openPopupBtns = document.querySelectorAll(".btn-show-list-chap");
+    let popUp = document.querySelector(".listchap");
+    openPopupBtns.forEach((openPopupBtn) => {
+        openPopupBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            popUp.style.display = "flex";
+        })
+    })
+
+    let closePopupBtn = document.getElementById("closePopup");
+    closePopupBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        popUp.style.display = "none";
+    })
+</script>

@@ -28,6 +28,15 @@ class Database
             throw new Exception("Could not query");
         }
     }
+
+    public function insert(string $sql)
+    {
+        try {
+            $result = mysqli_query($this->connect, $sql);
+        } catch (\Throwable $th) {
+            throw new Exception("Could not query");
+        }
+    }
 }
 
 // $db = Database::getInstance();
