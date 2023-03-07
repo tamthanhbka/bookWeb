@@ -7,12 +7,13 @@
     <title>ThichDocSach</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Icons-->
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.3.0-web/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/listbook.css">
 
-    <!-- Icons-->
-    <link rel="stylesheet" href="./fonts/fontawesome-free-6.3.0-web/css/fontawesome.min.css">
     <script>
         const $ = document.querySelector.bind(document);
     </script>
@@ -59,19 +60,17 @@
                 </div>
                 <div class="selector-body text-start">
                     <!-- Dropdown1 -->
-                    <div class="dropdown bc-white">
-                        <button class="bc-waka-hover col-12 bc-white text-black border border-light btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            TẤT CẢ TRUYỆN
-                        </button>
+                    <div class="dropdown bc-white text ">
+                    <a class="nav-link color-black text-uppercase text-center border-bottom py-1" href="http://127.0.0.1/web_sachtruyen/index1.php">
+                        TẤT CẢ CÁC TRUYỆN
+                    </a>
                     </div>
                     <?php
                     $categories = Sach::getAllCategory();
                     foreach ($categories as $category) {
                         echo "
                                     <div class=\"dropdown bc-white\">
-                                        <button class=\"bc-waka-hover col-12 bc-white text-black border border-light btn btn-secondary dropdown-toggle\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
-                                            <span class=\"text-uppercase\" href=\"index1.php?TL=$category\">$category</span>
-                                        </button>
+                                        <a class=\"nav-link color-black text-uppercase text-center border-bottom text py-1\" href=\"http://127.0.0.1/web_sachtruyen/index1.php?TL=$category\">$category</a>
                                     </div>
                                 ";
                     }
