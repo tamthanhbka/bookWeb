@@ -84,14 +84,8 @@
                     <div class="hot-book__name my-2">
                         <img src="images/miniLogo/icon.svg" alt="">
                         <?php
-                            if (isset($_GET['TL']) == true)
-                                $theLoai = $_GET['TL'];
-                            else
-                                $theLoai = null;
-                            if ($theLoai == null)
-                                echo "Tất cả các truyện";
-                            else
-                                echo "$theLoai";
+                            $searchInfo = $_GET['searchInfo'];
+                            echo "Kết quả tìm kiếm cho \"$searchInfo\"";
                         ?>
                     </div>
                 </div>
@@ -120,15 +114,7 @@
                 <!-- Storybook -->
                 <div class="row">
                     <?php
-                    if (isset($_GET['TL']) == true)
-                        $theLoai = $_GET['TL'];
-                    else
-                        $theLoai = null;
-
-                    if ($theLoai == null)
-                        $sachs = Sach::getAllBooks();
-                    else
-                        $sachs = Sach::getBooksByCategory($theLoai);
+                    $sachs = Sach::searchBook($searchInfo);
                     foreach ($sachs as $sach) {
                         include("view/book/categoryAllBooks.php");
                     }

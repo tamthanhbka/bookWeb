@@ -101,6 +101,17 @@ class Sach
         }
         return $records;
     }
+    public static function searchBook($search): array
+    {
+        $result = Database::getInstance()->query("SELECT * from sach WHERE (TenSach like '%$search%')or(TheLoai like '%$search%')");
+        $records = array();
+        foreach ($result as $record) {
+            $soChuong = Database::getInstance()->query("SELECT count(*) FROM chuong WHERE SachID = $record[0]")[0];
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $soChuong[0], $record[7], $record[8], $record[9], $record[10]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
 }
 class Chuong
 {
