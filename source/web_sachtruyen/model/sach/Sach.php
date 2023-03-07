@@ -103,7 +103,7 @@ class Sach
     }
     public static function searchBook($search): array
     {
-        $result = Database::getInstance()->query("SELECT * from sach WHERE (TenSach like '%$search%')or(TheLoai like '%$search%')");
+        $result = Database::getInstance()->query("SELECT * from sach where (tacgia like '%$search%')or(tensach like '%$search%');");
         $records = array();
         foreach ($result as $record) {
             $soChuong = Database::getInstance()->query("SELECT count(*) FROM chuong WHERE SachID = $record[0]")[0];
