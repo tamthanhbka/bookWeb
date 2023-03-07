@@ -74,7 +74,8 @@ class Sach
         $result = Database::getInstance()->query("SELECT * FROM sach limit 5");
         $records = array();
         foreach ($result as $record) {
-            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7], $record[8], $record[9], $record[10]);
+            $soChuong = Database::getInstance()->query("SELECT count(*) FROM chuong WHERE SachID = $record[0]")[0];
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $soChuong[0], $record[7], $record[8], $record[9], $record[10]);
             array_push($records, $sach);
         }
         return $records;
@@ -84,7 +85,8 @@ class Sach
         $result = Database::getInstance()->query("SELECT * from sach WHERE TheLoai = '$theLoai'");
         $records = array();
         foreach ($result as $record) {
-            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7], $record[8], $record[9], $record[10]);
+            $soChuong = Database::getInstance()->query("SELECT count(*) FROM chuong WHERE SachID = $record[0]")[0];
+            $sach = new Sach($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $soChuong[0], $record[7], $record[8], $record[9], $record[10]);
             array_push($records, $sach);
         }
         return $records;
