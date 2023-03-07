@@ -108,37 +108,44 @@
 
 
         <!-- LTWeb Recommend -->
-        <div class="admin-recommend pt-2 rounded mt-5">
-            <div class="hot-book__name mt-3 mb-2 mx-5">
-                <img src="images/miniLogo/icon.svg" alt="">
-                Sách đề cử
-            </div>
-            <div class="row">
-                <div class="mt-3 col-3">
-                    <a href="" class="no-decoration">
-                        <img src="<?= $sach->URLbiaSach ?>" alt="" class="col-12 rounded">
-                    </a>
-                </div>
-
-                <div class="col-9">
+        <div class="row mt-3">
+            <div class="col-1"></div>
+            <div class="col-11 hot-book ms-5 pb-3 rounded">
+                <div class="admin-recommend pt-2 rounded row">
+                    <div class="hot-book__name mb-2 ms-2">
+                        <img src="images/miniLogo/icon.svg" alt="">
+                        Sách đề cử
+                    </div>
                     <div class="row">
-                        <a href="../web_sachtruyen/view/detail/index.php?id=<?= $sach->id ?>" class="row fw-bold mt-5 fs-4 no-decoration color-waka_hover"><?= $sach->ten ?></a>
-                        <div class="row mt-3">
-                            <div class="col-3">Tác giả: <?= $sach->tacGia ?></div>
-                            <div class="col-3">Số chương: <?= $sach->soChuong ?></div>
-                            <div class="col-3">Trạng thái: <?= $sach->trangThai ?></div>
+                        <div class="mt-3 col-3">
+                            <a href="" class="no-decoration">
+                                <img src="<?= $sach->URLbiaSach ?>" alt="" class="col-12 rounded">
+                            </a>
                         </div>
-                        <div class="row mt-3">
-                            <?= $sach->moTa ?><br>
-                            Mọi người thường nói họ chỉ được sống một lần trong đời, đó là câu nói trước khi họ chưa từng đọc sách.
-                            Cuốn sách này đã khẳng định được giá trị qua thời gian và được bạn đọc mọi thời đại cũng như khắp nơi trên thế giới đón nhận.
-                            Chắc chắn nó sẽ giúp bạn cải thiện mọi kĩ năng và tìm ra một góc nhìn hoàn thiện hơn về mọi vấn đề trong cuộc sống.
-                            <br>Chúc bạn có những phút giây đọc sách vui vẻ cùng Sách hay.
+
+                        <div class="col-9">
+                            <div class="row">
+                                <a href="../web_sachtruyen/view/detail/index.php?id=<?= $sach->id ?>" class="row fw-bold mt-5 fs-4 no-decoration color-waka_hover"><?= $sach->ten ?></a>
+                                <div class="row mt-3">
+                                    <div class="col-3">Tác giả: <?= $sach->tacGia ?></div>
+                                    <div class="col-3">Số chương: <?= $sach->soChuong ?></div>
+                                    <div class="col-3">Trạng thái: <?= $sach->trangThai ?></div>
+                                </div>
+                                <div class="row mt-3">
+                                    <?= $sach->moTa ?><br>
+                                    Mọi người thường nói họ chỉ được sống một lần trong đời, đó là câu nói trước khi họ chưa từng đọc sách.
+                                    Cuốn sách này đã khẳng định được giá trị qua thời gian và được bạn đọc mọi thời đại cũng như khắp nơi trên thế giới đón nhận.
+                                    Chắc chắn nó sẽ giúp bạn cải thiện mọi kĩ năng và tìm ra một góc nhìn hoàn thiện hơn về mọi vấn đề trong cuộc sống.
+                                    <br>Chúc bạn có những phút giây đọc sách vui vẻ cùng Sách hay.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        
     </div>
 
     <!-- Footer -->

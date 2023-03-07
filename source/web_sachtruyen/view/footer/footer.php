@@ -1,4 +1,4 @@
-<footer class="mt-5 mt-5 bg-light border border-success border-end-0 border-bottom-0 border-start-0 border-5">
+<footer class="body border border-success border-end-0 border-bottom-0 border-start-0 border-5">
         <div class="row .text-secondary-emphasis">
             <div class="col-6">
                 <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo">
