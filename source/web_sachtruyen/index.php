@@ -56,11 +56,7 @@
                     </div>
                     <!-- List HOT Books -->
                     <?php
-                    // include("config/config.php");                        
-                    $sachs = Sach::getAllBooks();
-                    foreach ($sachs as $sach) {
-                        include("view/book/hotBooks.php");
-                    }
+                        include("config/hotBooks.php");                        
                     ?>
                     <!-- End list HOT Book -->
                 </div>
@@ -76,11 +72,11 @@
                         TOP sách được yêu thích
                     </div>
                     <?php
-                    $sachs = Sach::getAllBooks();
-                    for ($i = 0; $i < 2; $i++) {
-                        $sach = $sachs[$i];
-                        include("view/book/recommendBooks.php");
-                    }
+                        $sachs = Sach::getAllBooks();
+                        for ($i = 0; $i < 2; $i++) {
+                            $sach = $sachs[$i];
+                            include("view/book/recommendBooks.php");
+                        }
                     ?>
                 </div>
             </div>
