@@ -5,7 +5,7 @@
                 <img src="http://127.0.0.1/web_sachtruyen/images/logo/main-logo.jpg" alt="main-logo" class="rounded">
             </div>
             <div class="font-weight-medium mt-4">
-                Cơ quan chủ quản: <span class="fw-bolder">Tanhoang845 Development</span><br>
+                Cơ quan chủ quản: <span class="fw-bolder">Group 13 Development</span><br>
                 Địa chỉ: D5-305 HUST, Việt Nam <br>
                 Email: tanhoang845@gmail.com | Tel: 023456789
             </div>

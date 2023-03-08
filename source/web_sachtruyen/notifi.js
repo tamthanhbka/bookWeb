@@ -8,7 +8,7 @@ class Notifi {
         this.messElement = document.querySelector(".mess");
         this.susseccIcon = document.getElementById("sussecc");
     }
-    show(mess, sussecc = true, sec = 4) {
+    show(mess, sussecc = true, sec = 2) {
         this.messElement.innerText = mess;
         this.element.style.right = "15px";
         this.element.style.opacity = "1";

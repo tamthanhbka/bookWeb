@@ -71,7 +71,7 @@ class Sach
     }
     public static function getAllBooks(): array
     {
-        $result = Database::getInstance()->query("SELECT * FROM sach limit 5");
+        $result = Database::getInstance()->query("SELECT * FROM sach");
         $records = array();
         foreach ($result as $record) {
             $soChuong = Database::getInstance()->query("SELECT count(*) FROM chuong WHERE SachID = $record[0]")[0];
