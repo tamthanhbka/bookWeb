@@ -108,7 +108,7 @@
 
 
         <!-- LTWeb Recommend -->
-        <div class="row mt-3">
+        <div class="row mt-4 mb-4">
             <div class="col-1"></div>
             <div class="col-11 hot-book ms-5 pb-3 rounded">
                 <div class="admin-recommend pt-2 rounded row">
@@ -145,13 +145,16 @@
             </div>
         </div>
 
-        
+
     </div>
 
     <!-- Footer -->
     <?php
     include("view/footer/footer.php");
     ?>
+    <div class="notifi">
+        <span><i id="sussecc" class="bi bi-check-lg"></i><span class="mess">Thêm vào tủ sách thành công</span></span>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
     <!-- <script>
@@ -162,6 +165,7 @@
             });
         });
     </script> -->
+    <script src="notifi.js"></script>
 </body>
 
 </html>

@@ -14,8 +14,8 @@
                         <p>Tác giả : <a href="#"> <?= $sach->tacGia ?> </a></p>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
-                        <p class="status <?php if ($sach->trangThai == 'Đang ra') echo "status-dangra";
-                                            else echo "status-hoanthanh"; ?>"><?= $sach->trangThai; ?></p>
+                        <p class="state <?php if ($sach->trangThai == 'Đang ra') echo "status-dangra";
+                                        else echo "status-hoanthanh"; ?>"><?= $sach->trangThai; ?></p>
                     </div>
                 </div>
                 <div class="row book-type">
@@ -29,7 +29,7 @@
 
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <div class="row"><i class="bi bi-suit-heart icon-book-desc"></i>Theo dõi</div>
-                        <div class="row number">102</div>
+                        <div class="row number"><?= $like ?></div>
                     </div>
 
                     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -45,11 +45,11 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <!-- <a id="add-book" class="btn-green" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Thêm vào tủ sách</a> -->
-                            <a id="add-book" class="btn-green" href="#">Thêm vào tủ sách</a>
+                            <a class="submit-btn btn-green" alt="Thêm vào tủ sách" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Thêm vào tủ sách</a>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 order-book">
                             <!-- <a id="order-book" class="btn-green" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Mua sách</a> -->
-                            <a id="order-book" class="btn-green" href="#">Mua sách</a>
+                            <a class="submit-btn btn-green" alt="Mua sách" href="../../controller/orderBook.php?id=<?= $_GET['id'] ?>">Mua sách</a>
                         </div>
                     </div>
 

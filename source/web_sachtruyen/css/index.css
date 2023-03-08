@@ -1,106 +1,122 @@
-.input{
-    width: 90%;
+.input {
+  width: 90%;
 }
 
-.search-form{
-    display: inline-flex;
+.search-form {
+  display: inline-flex;
 }
 
-.search-btn{
-    background-color: #6dae43;
+.search-btn {
+  background-color: #6dae43;
 }
-.search-btn:hover{
-    background-color: #6dae43;
-    opacity: 0.8;
+.search-btn:hover {
+  background-color: #6dae43;
+  opacity: 0.8;
 }
 
 .upgrade-author,
-.header-signin{
-    text-decoration: none;
+.header-signin {
+  text-decoration: none;
 }
 
 .upgrade-author:hover,
-.header-signin:hover{
-    color: red;
-    opacity: 0.7;
+.header-signin:hover {
+  color: red;
+  opacity: 0.7;
 }
 
-.header-nav{
-    background-color: rgba(0, 0, 0, 0.05);
+.header-nav {
+  background-color: #ffffff;
 }
 
-.nav-item:hover, .nav-link:hover{
-    background-color: #6dae43;
+.nav-item:hover,
+.nav-link:hover {
+  background-color: #6dae43;
 }
 
-.body{
-    font-family: "Roboto",sans-serif;
-    background-color: rgba(0, 0, 0, 0.1);
+.body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.type-book{
-    color: black;
+.type-book {
+  color: black;
 }
 
-.hot-book{
-    background-color: #fff;
+.hot-book {
+  background-color: #fff;
 }
 
-.hot-book__name{
-    margin-bottom: 1rem;
-    font-size:1.5rem;
-    color: #222;
+.hot-book__name {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #222;
 }
 
-.select-book{
-    color: #222;
-    font-size: 0.9rem;
-    text-decoration: none;
+.select-book {
+  color: #222;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
-.btn-primary{
-    font-size: 0.8rem;
-    background-color: #6dae43;  
-    border-color: #6dae43;
+.btn-primary {
+  font-size: 0.8rem;
+  background-color: #6dae43;
+  border-color: #6dae43;
 }
 
-.btn-primary:hover{
-    font-size: 0.8rem;
-    background-color: #6dae43;  
-    border-color: #6dae43;
-    opacity: 0.9;
+.btn-primary:hover {
+  font-size: 0.8rem;
+  background-color: #6dae43;
+  border-color: #6dae43;
+  opacity: 0.9;
 }
 
-.recommended-book{
-    background-color: #fff;
+.recommended-book {
+  background-color: #fff;
 }
 
-.no-decoration{
-    text-decoration: none;
-    color: #222;
+.no-decoration {
+  text-decoration: none;
+  color: #222;
 }
 
-.color-9{
-    color: #999;
+.color-9 {
+  color: #999;
 }
 
-.admin-recommend{
-    background-color: #fff;
+.admin-recommend {
+  background-color: #fff;
 }
 
 .footer-menu-list,
-.footer-menu-list-item{
-    list-style: none;
-    list-style-type: none;
+.footer-menu-list-item {
+  list-style: none;
+  list-style-type: none;
+  color: #9c9c9c;
+  padding: 2px 0;
 }
 
-.description{
-    width: 120px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 25px;
-    -webkit-line-clamp: 3;
-    height: 75px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+.button-facebook-social {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: #65b533;
+  border-radius: 30px;
+  box-shadow: 1px 2px 4px 2px #deedcf;
+}
+
+.button-facebook-social a {
+  color: white;
+  font-weight: 600;
+}
+
+.description {
+  width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 25px;
+  -webkit-line-clamp: 3;
+  height: 75px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }

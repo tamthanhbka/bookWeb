@@ -6,6 +6,7 @@ if (!isset($_GET['id']) || !$_GET['id'] || !is_numeric($_GET['id'])) {
 include("../../model/sach/Sach.php");
 $sach = Sach::findById($_GET['id']);
 $chuongs = Chuong::findBySachId($_GET['id']);
+$like = BookCase::getLike($_GET['id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,68 +57,8 @@ $chuongs = Chuong::findBySachId($_GET['id']);
     <div class="notifi">
         <span><i id="sussecc" class="bi bi-check-lg"></i><span class="mess">Thêm vào tủ sách thành công</span></span>
     </div>
+    <script src="../../notifi.js"></script>
 
 </body>
 
 </html>
-
-<script>
-    class Notifi {
-        messElement;
-        element;
-        susseccIcon;
-        constructor() {
-            this.element = document.querySelector(".notifi");
-            this.messElement = document.querySelector(".mess");
-            this.susseccIcon = document.getElementById("sussecc");
-        }
-        show(mess, sussecc = true, sec = 4) {
-            this.messElement.innerText = mess;
-            this.element.style.right = "15px";
-            this.element.style.opacity = "1";
-            let element = this.element;
-            let susseccIcon = this.susseccIcon;
-            clearTimeout(
-                setTimeout(() => {
-                    element.style.right = "-200px";
-                    this.element.style.opacity = "0";
-                }, sec * 1000) - 1);
-            if (sussecc) {
-                susseccIcon.classList.remove("bi-info-circle");
-                susseccIcon.classList.add("bi-check-lg");
-                susseccIcon.style.color = "#6fc13c";
-            } else {
-                susseccIcon.classList.remove("bi-check-lg");
-                susseccIcon.classList.add("bi-info-circle");
-                susseccIcon.style.color = "orange";
-            }
-        }
-    }
-    const call = (url) => {
-        return fetch(url).then((response) => response.status).then((status) => {
-            if (status !== 200)
-                return false;
-            return true;
-        });
-    }
-    let addBookBtn = document.getElementById("add-book");
-    let orderBookBtn = document.getElementById("order-book");
-    // orderBookBtn.classList.re
-    addBookBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        call("../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>").then(bool => {
-            new Notifi().show("Thêm vào tủ sách thành công!");
-        })
-    })
-
-    orderBookBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        call("../../controller/orderBook.php?id=<?= $_GET['id'] ?>").then(bool => {
-            if (bool)
-                new Notifi().show("Mua sách thành công!");
-            else {
-                new Notifi().show("Mua sách thất bại!", false);
-            }
-        })
-    })
-</script>

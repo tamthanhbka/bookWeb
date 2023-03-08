@@ -33,6 +33,7 @@ header {
 
 .logo > img {
   height: 15vh;
+  box-shadow: 0px 1px 8px 2px #aaa;
 }
 
 .header .search {
@@ -111,7 +112,8 @@ section a {
   color: var(--text-color);
 }
 
-.status {
+.status,
+.state {
   font-size: var(--font-size-sub);
   padding: 2px 5px;
   border-radius: 12px;
@@ -123,10 +125,24 @@ section a {
 .status-hoanthanh {
   color: #ff3b30;
   background-color: #ffe2e0;
+  font-size: var(--font-size-sub);
+  padding: 2px 5px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 16px;
+  /* margin-top: 0.5em; */
+  width: 8em;
 }
 .status-dangra {
   color: #38b334;
   background-color: #f2f8ee;
+  font-size: var(--font-size-sub);
+  padding: 2px 5px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 16px;
+  /* margin-top: 0.5em; */
+  width: 8em;
 }
 
 .book-info .book-type a {

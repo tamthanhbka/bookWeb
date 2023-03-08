@@ -1,6 +1,7 @@
 <?php
 //  $href_docsach = link den chi tiet sach
-    $href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
+$href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
+$like = BookCase::getLike($sach->id);
 ?>
 
 <div class="recommended-book col-6 py-3 rounded position-relative">
@@ -31,7 +32,7 @@
                 <div class="col-3">
                     <i></i>
                     Theo dõi<br>
-                    <div class="fw-bold">100</div>
+                    <div class="fw-bold"><?= $like ?></div>
                 </div>
                 <div class="col-3">
                     <i></i>
@@ -39,15 +40,15 @@
                     <div class="fw-bold"><?php echo $sach->giaSach; ?></div>
                 </div>
             </div>
-            <div class="row position-absolute bottom-0 end-0" >
+            <div class="row position-absolute bottom-0 end-0">
                 <div class="col-5 mb-2">
-                    <a href="" class="add-book icon ">
-                        <i class="fa-solid fa-circle-plus fa-2x"></i>
-                    </a>        
+                    <a class="icon">
+                        <i alt="Thêm vào tủ sách" href="controller/addToBookCase.php?id=<?= $sach->id ?>" class="submit-btn fa-solid fa-circle-plus fa-2x"></i>
+                    </a>
                 </div>
                 <div class="col-5 mb-2">
-                    <a href="" class="order-book icon">
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                    <a class="icon">
+                        <i alt="Mua sách" href="controller/orderBook.php?id=<?= $sach->id ?>" class="submit-btn fa-solid fa-cart-shopping fa-2x"></i>
                     </a>
                 </div>
             </div>

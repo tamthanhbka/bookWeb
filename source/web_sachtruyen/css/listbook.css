@@ -1,5 +1,5 @@
 .body {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
 }
 .bc-waka-hover:hover {
   background-color: #6dae43 !important;
@@ -92,12 +92,15 @@
   cursor: pointer;
 }
 
-.status {
+.status-hoanthanh {
   background-color: #ffe2e0;
   color: #ff3b30;
 }
 
-
+.status-dangra {
+  color: #38b334;
+  background-color: #f2f8ee;
+}
 .addbook {
   text-align: center;
   background-color: #6dae43;
@@ -109,12 +112,12 @@
   cursor: pointer;
 }
 
-.icon{
+.icon {
   color: #6dae43 !important;
-  opacity: .4;
+  opacity: 0.4;
 }
 
-.icon:hover{
+.icon:hover {
   opacity: 1;
 }
 

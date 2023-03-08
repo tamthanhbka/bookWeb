@@ -61,9 +61,9 @@
                 <div class="selector-body text-start">
                     <!-- Dropdown1 -->
                     <div class="dropdown bc-white text ">
-                    <a class="nav-link color-black text-uppercase text-center border-bottom py-1" href="http://127.0.0.1/web_sachtruyen/index1.php">
-                        TẤT CẢ CÁC TRUYỆN
-                    </a>
+                        <a class="nav-link color-black text-uppercase text-center border-bottom py-1" href="http://127.0.0.1/web_sachtruyen/index1.php">
+                            TẤT CẢ CÁC TRUYỆN
+                        </a>
                     </div>
                     <?php
                     $categories = Sach::getAllCategory();
@@ -84,8 +84,8 @@
                     <div class="hot-book__name my-2">
                         <img src="images/miniLogo/icon.svg" alt="">
                         <?php
-                            $searchInfo = $_GET['searchInfo'];
-                            echo "Kết quả tìm kiếm cho \"$searchInfo\"";
+                        $searchInfo = $_GET['searchInfo'];
+                        echo "Kết quả tìm kiếm cho \"$searchInfo\"";
                         ?>
                     </div>
                 </div>
@@ -184,7 +184,11 @@
                 </div>
             </div>
     </footer>
+    <div class="notifi">
+        <span><i id="sussecc" class="bi bi-check-lg"></i><span class="mess">Thêm vào tủ sách thành công</span></span>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="notifi.js"></script>
 </body>
 
 </html>

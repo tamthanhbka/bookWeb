@@ -16,8 +16,7 @@ $href_loggin = "#";
             <div class="search-box mt-5">
                 <div class="row">
                     <form class="search-form" action="http://127.0.0.1/web_sachtruyen/search.php" method="GET">
-                        <input class="form-control input col-5" name="searchInfo" placeholder="Nhập tên sách, tác giả.." 
-                            type="text" value="<?php echo (isset($_GET['searchInfo'])) ? $_GET['searchInfo'] : ''; ?>">
+                        <input class="form-control input col-5" name="searchInfo" placeholder="Nhập tên sách, tác giả.." type="text" value="<?php echo (isset($_GET['searchInfo'])) ? $_GET['searchInfo'] : ''; ?>">
                         <button class="btn btn-link search-btn col-1" type="submit">
                             <i class="bi bi-search"></i>
                         </button>

@@ -14,7 +14,7 @@ $sachs = Sach::getListBook($_GET['id']);
                 <div class="item-name">
                     <a href="<?= "/web_sachtruyen/view/detail?id=" . $sach->id ?>"><?php echo $sach->ten; ?></a>
                 </div>
-                <div class="status <?php if ($sach->trangThai == 'Đang ra') echo "status-dangra";
+                <div class="state <?php if ($sach->trangThai == 'Đang ra') echo "status-dangra";
                                     else echo "status-hoanthanh"; ?>">
                     <?php echo $sach->trangThai; ?>
                 </div>

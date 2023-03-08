@@ -37,7 +37,7 @@
     include("view/header/navbar.php");
     ?>
 
-    <div class="row body">
+    <div class="row body pb-5">
         <!-- NAV Tree -->
         <div class="row mt-2">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -61,9 +61,9 @@
                 <div class="selector-body text-start">
                     <!-- Dropdown1 -->
                     <div class="dropdown bc-white text ">
-                    <a class="nav-link color-black text-uppercase text-center border-bottom py-1" href="http://127.0.0.1/web_sachtruyen/index1.php">
-                        TẤT CẢ CÁC TRUYỆN
-                    </a>
+                        <a class="nav-link color-black text-uppercase text-center border-bottom py-1" href="http://127.0.0.1/web_sachtruyen/index1.php">
+                            TẤT CẢ CÁC TRUYỆN
+                        </a>
                     </div>
                     <?php
                     $categories = Sach::getAllCategory();
@@ -84,14 +84,14 @@
                     <div class="hot-book__name my-2">
                         <img src="images/miniLogo/icon.svg" alt="">
                         <?php
-                            if (isset($_GET['TL']) == true)
-                                $theLoai = $_GET['TL'];
-                            else
-                                $theLoai = null;
-                            if ($theLoai == null)
-                                echo "Tất cả các truyện";
-                            else
-                                echo "$theLoai";
+                        if (isset($_GET['TL']) == true)
+                            $theLoai = $_GET['TL'];
+                        else
+                            $theLoai = null;
+                        if ($theLoai == null)
+                            echo "Tất cả các truyện";
+                        else
+                            echo "$theLoai";
                         ?>
                     </div>
                 </div>
@@ -139,66 +139,14 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-5 mt-5 bg-light border border-success border-end-0 border-bottom-0 border-start-0 border-5">
-        <div class="row .text-secondary-emphasis">
-            <div class="col-6">
-                <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 logo">
-                    <img src="images/logo/main-logo.jpg" alt="main-logo">
-                </div>
-                <div class="font-weight-medium">
-                    Cơ quan chủ quản: <span class="fw-bolder">Tanhoang845 Development</span><br>
-                    Địa chỉ: D5-305 HUST, Việt Nam <br>
-                    Email: tanhoang845@gmail.com | Tel: 023456789
-                </div>
-            </div>
-            <!-- Huu Ich -->
-            <div class="col-2">
-                <div class="footer-right footer-menu-list-wrap mt-5">
-                    <div class="title fw-bold text-center">HỮU ÍCH</div>
-                    <div class="content">
-                        <ul class="footer-menu-list">
-                            <li class="footer-menu-list-item">Chính sách bảo mật</li>
-                            <li class="footer-menu-list-item">Điều khoản sử dụng</li>
-                            <li class="footer-menu-list-item">
-                                <a href="" class="">
-                                    Quy định về nội dung
-                                </a>
-                            </li>
-                            <li class="footer-menu-list-item">Vấn đề bản quyền</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Lien he -->
-            <div class="col-2">
-                <div class="footer-right footer-social-contact mt-5">
-                    <div class="title fw-bold">Liên hệ</div>
-                    <div class="content">
-                        <div class="button-facebook-social">
-                            <a class="text-center" href="https://www.facebook.com/mangvanhocso1/" target="_blank">
-                                <!-- <img src="/cdv-assets/img/IconFacebook.ac66021.svg" class="icon-face"> -->
-                                Fanpage Cộng đồng
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- QR -->
-            <div class="col-2 mt-5">
-                <div class="el-col el-col-4" style="padding-left:15px;padding-right:15px;">
-                    <div class="footer-right footer-app-contact">
-                        <div class="title fw-bold">Tải app</div>
-                        <div class="content">
-                            <div class="title-qr-app">Quét mã QR để cài APP</div>
-                            <div class="qr-code-app">
-                                <!-- <img src="/cdv-assets/QR.png?v=1677035874671" class="lazyLoad isLoading"> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </footer>
+    <?php
+    include("view/footer/footer.php");
+    ?>
+    <div class="notifi">
+        <span><i id="sussecc" class="bi bi-check-lg"></i><span class="mess">Thêm vào tủ sách thành công</span></span>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="notifi.js"></script>
 </body>
 
 </html>

@@ -214,10 +214,11 @@ class User
         return new User($record[0], $record[1], $record[2], $record[3], $record[4], $record[5], $record[6], $record[7]);
     }
 
-    public function setPoint(int $id, int $point)
+    public static function setPoint(int $id, int $sachId)
     {
-
-        Database::getInstance()->query("UPDATE nguoidung SET DiemTichLuy = ");
+        $sach = Sach::findById($sachId);
+        $user = User::getUserById($id);
+        Database::getInstance()->insert("UPDATE nguoidung SET DiemTichLuy = $user->diem - $sach->giaSach where ID = $id");
     }
 }
 
@@ -234,6 +235,31 @@ class OrderBook
 
     public function addItem(OrderBook $order)
     {
-        Database::getInstance()->query("INSERT INTO muasach (userId, sachId) values ($order->userId, $order->sachId)");
+        Database::getInstance()->insert("INSERT INTO muasach (NguoiDungID, SachID) values ($order->userId, $order->sachId)");
+    }
+}
+
+class BookCase
+{
+    public $userId, $sachId, $date;
+
+    public function __construct($userId, $sachId, $date)
+    {
+        $this->userId = $userId;
+        $this->sachId = $sachId;
+        $this->date = $date;
+    }
+
+    public function addItem(BookCase $item)
+    {
+        Database::getInstance()->insert("INSERT INTO tusach (NguoiDungID, SachID) values ($item->userId, $item->sachId)");
+    }
+
+    public static function getLike($sachId)
+    {
+        $like = Database::getInstance()->query("SELECT count(*) FROM tusach WHERE SachID = $sachId");
+        if (isset($like[0]))
+            return $like[0][0];
+        return 0;
     }
 }

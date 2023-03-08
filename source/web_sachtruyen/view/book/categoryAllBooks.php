@@ -29,26 +29,23 @@ $href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
                 <?php echo $sach->soChuong; ?> Chương
             </div>
 
-            <?php
-                // if($sach->trangThai == "Hoàn thành1")
-                //     echo "<div class=\"status status-2 pt-2 pb-4\">
-                //             $sach->trangThai
-                //         </div>";
-                // else
-                    echo "<div class=\"pt-2 pb-4 status\">
-                            $sach->trangThai
-                          </div>"
-            ?>
 
-            <div class="row position-absolute bottom-0 end-0" >
+
+            <div class="pt-2 pb-4 status  <?php if ($sach->trangThai == 'Đang ra') echo "status-dangra";
+                                            else echo "status-hoanthanh"; ?>">
+                <?= $sach->trangThai ?>
+            </div>
+
+
+            <div class="row position-absolute bottom-0 end-0">
                 <div class="col-5 mb-2">
-                    <a href="" class="add-book icon ">
-                        <i class="fa-solid fa-circle-plus fa-2x"></i>
-                    </a>        
+                    <a class="icon ">
+                        <i alt="Thêm vào tủ sách" href="controller/addToBookCase.php?id=<?= $sach->id ?>" class="submit-btn fa-solid fa-circle-plus fa-2x"></i>
+                    </a>
                 </div>
                 <div class="col-5 mb-2">
-                    <a href="" class="order-book icon">
-                        <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                    <a class="icon">
+                        <i alt="Mua sách" href="controller/orderBook.php?id=<?= $sach->id ?>" class="submit-btn fa-solid fa-cart-shopping fa-2x"></i>
                     </a>
                 </div>
             </div>
