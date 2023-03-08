@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+
+body {
+  position: relative;
+}
+
+:root {
+  --font: Roboto, sans-serif;
+  --font-size-sub: 14px;
+  --font-size-content: 20px;
+  --font-size-subtitle: 18px;
+  --font-size-title: 24px;
+  --font-weight: 700;
+  --text-color: #212529;
+  --border-img: 8px;
+  --bg-color: rgb(255, 255, 255);
+}
+.row {
+  margin: 0;
+}
+
+header {
+  height: 20vh;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo > img {
+  height: 15vh;
+}
+
+.header .search {
+  margin-top: 4vh;
+}
+
+.header .search .form-control {
+  width: 80%;
+}
+
+.nav .type > ul {
+  list-style-type: none;
+}
+
+.nav .type li {
+  display: inline-block;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+section {
+  background-color: #f1f1f1;
+  padding-bottom: 2rem;
+  /* display: flex; */
+}
+
+section a {
+  text-decoration: none;
+}
+
+.path-web {
+  padding: 1% 0;
+}
+
+.path-web a:hover {
+  color: #6dae43;
+}
+
+.cl-grey {
+  color: #999999;
+}
+.cl-green {
+  color: #6dae43;
+}
+.path-web .icon-path-web {
+  align-items: center;
+  font-size: 12px;
+  color: #999999;
+}
+
+.book-intro-main {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.book-intro-content {
+  margin: 2em 1em;
+}
+
+.book-intro .book-cover img {
+  width: 100%;
+  border-radius: var(--border-img);
+}
+
+.book-info .book-name h3 {
+  font-weight: var(--font-weight);
+}
+
+.book-info .book-name a {
+  color: var(--text-color);
+}
+
+.book-author-status .author a {
+  color: var(--text-color);
+}
+
+.status {
+  font-size: var(--font-size-sub);
+  padding: 2px 5px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 16px;
+  /* margin-top: 0.5em; */
+  width: 8em;
+}
+.status-hoanthanh {
+  color: #ff3b30;
+  background-color: #ffe2e0;
+}
+.status-dangra {
+  color: #38b334;
+  background-color: #f2f8ee;
+}
+
+.book-info .book-type a {
+  background-color: #f1f1f1;
+  width: 10em;
+  text-align: center;
+  font-size: var(--font-size-sub);
+  border-radius: 12px;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.book-desc .icon-book-desc {
+  width: 1.5em;
+  font-size: var(--font-size-content);
+  padding-left: 0;
+}
+
+.book-desc .number {
+  font-weight: 900;
+  font-size: var(--font-size-subtitle);
+}
+
+.book-control {
+  margin-top: 2rem;
+}
+
+.btn-green {
+  background-color: #6fb73f;
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.book-control .control a {
+  color: var(--bg-color);
+  text-align: center;
+  min-width: 70%;
+  text-transform: uppercase;
+  font-weight: var(--font-weight);
+}
+
+.book-control .add-bookcase {
+  margin-top: 2em;
+}
+.other-info {
+  margin-top: 1rem;
+}
+
+.other-info .book-desc {
+  padding: 0;
+}
+
+.listchap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(102, 102, 102, 0.5);
+}
+
+.content.popup {
+  overflow-y: auto;
+  height: 85%;
+}
+
+.popup-listchap {
+  /* position: relative; */
+  padding: 0;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  margin-top: 5%;
+  height: 80%;
+  /* max-height: 600px; */
+}
+.content::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 20px;
+}
+
+.content::-webkit-scrollbar-track {
+  width: 2px;
+}
+
+.popup-header {
+  /* position: -webkit-sticky;
+  position: sticky; */
+  /* top: 0; */
+  padding: 1em 0;
+  position: relative;
+  border-bottom: 1px solid #dddbdb;
+}
+
+.popup-header h2 {
+  margin-left: 1em;
+  margin-bottom: 0;
+  color: #66a33e;
+}
+
+.popup-header .close-icon {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  cursor: pointer;
+  color: #868686;
+}
+
+.popup-header .close-icon:hover {
+  opacity: 0.7;
+}
+
+.other-info .book-detail {
+  width: 100%;
+  padding: 0;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
+.other-info .book-recommend {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
+.book-detail-option a {
+  color: #999999;
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight);
+}
+
+.book-detail-option a:hover {
+  color: #6fb73f;
+}
+
+.book-detail-option {
+  padding: 2rem 0;
+}
+
+.content p {
+  font-size: 16px;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+.content li {
+  border-bottom: 2px solid #efefef;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.content a {
+  color: #222222;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.content span {
+  position: absolute;
+  right: 1%;
+  opacity: 0.6;
+}
+
+.book-recommend {
+  justify-self: flex-start;
+}
+
+.book-recommend h3 {
+  color: #222222;
+  line-height: 30px;
+  font-size: var(--font-size-title);
+  /* white-space: nowrap; */
+  font-weight: var(--font-weight);
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.add-book-comment {
+  padding: 4%;
+  background-color: var(--bg-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-img);
+}
+
+.add-book-comment h3 {
+  font-weight: var(--font-weight);
+  margin-left: 1rem;
+}
+
+.icon-title {
+  margin-right: 0.5rem;
+}
+
+.add-book-comment .input-comment textarea {
+  margin-left: 2rem;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  color: #606266;
+  font-size: var(--font-size-sub);
+  resize: none;
+  padding: 12px;
+  width: 95%;
+}
+
+.add-book-comment .submit-btn {
+  width: 30%;
+  margin-left: 70%;
+  margin-top: 1rem;
+  padding: 8px 30px;
+  border-radius: 20px;
+  background-color: #6dae43;
+  color: #fff;
+  border: none;
+}
+
+.book-recommend .list-book img {
+  width: 100%;
+  border-radius: var(--border-img);
+}
+
+.book-recommend .list-book .item-recommend {
+  margin-bottom: 4%;
+}
+
+.book-recommend .list-book .item-name {
+  margin-bottom: 0.3rem;
+}
+
+.book-recommend .list-book .item-recommend a {
+  color: #222222;
+  display: inline;
+  font-family: var(--font);
+  font-size: var(--font-size-subtitle);
+  text-align: left;
+}
+
+.book-recommend .list-book .item-recommend a:hover {
+  color: #6fb73f;
+}
+
+.book-recommend .list-book .status {
+}
+
+.view-book-comment {
+  padding: 4%;
+  background-color: var(--bg-color);
+  font-size: var(--font-size-sub);
+  width: 100%;
+  border-radius: var(--border-img);
+}
+
+.view-book-comment .item-cmt {
+  margin: 1em 0;
+  justify-content: flex-end;
+}
+
+.view-book-comment .comment {
+  width: 90%;
+  border-radius: 16px;
+  background-color: #f1f1f1;
+}
+
+.view-book-comment .comment h6 {
+  padding-top: 2%;
+  font-weight: 700;
+}
+
+.view-book-comment .avatar {
+  width: 10%;
+}
+
+.view-book-comment .avatar > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.view-book-comment .detail-cmt {
+  /* justify-content: flex-end; */
+  max-width: 92%;
+  margin-top: 6px;
+  font-style: italic;
+
+  /* float: left; */
+  /* width: 90%; */
+  /* position: absolute; */
+  /* bottom: -1px; */
+}
+
+.view-book-comment .detail-cmt .date {
+  width: 50%;
+}
+
+.view-book-comment .detail-cmt .chap {
+  width: 50%;
+}
+
+/* Chapter */
+.main-chapter {
+  background-color: var(--bg-color);
+  border-radius: var(--border-img);
+  padding-bottom: 3%;
+}
+
+.header-chapter {
+  padding: 4% 0;
+  text-align: center;
+}
+
+.header-chapter .book-name a {
+  color: #6fb73f;
+}
+
+.header-chapter .book-name h3 {
+  font-weight: 900;
+  margin-bottom: 3%;
+}
+
+.header-chapter .chap-name {
+  margin: 3% 0;
+}
+
+.header-chapter .chap-name h4 {
+  font-weight: 900;
+}
+
+.control-chapter a {
+  color: #6dae43;
+}
+
+.control-chapter-item {
+  /* text-align: center; */
+  font-size: var(--font-size-content);
+  display: inline-block;
+  /* line-height: 10%; */
+}
+
+.btn-white {
+  background-color: #e9f3e3;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 20px;
+  min-width: 90%;
+}
+
+.control-chapter .btn-show-list-chap {
+  min-width: 90%;
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.icon-show-list-chap {
+  position: absolute;
+  right: 5%;
+}
+
+.content-chapter p {
+  font-size: var(--font-size-content);
+  text-align: justify;
+  padding: 0 3%;
+}
+
+.content-chapter {
+  margin-bottom: 5%;
+}
+.content-chapter p {
+  margin-bottom: 1.5em;
+}
+
+.control-chapter {
+  text-align: center;
+}
+
+.order-book {
+  margin-top: 2em;
+}
+
+footer {
+  background-color: #726b6b;
+}
+
+footer p {
+  margin: 0;
+}
+.disable {
+  display: none;
+}
+
+.notifi {
+  background-color: #0c0c0c8f;
+  padding: 0.8em;
+  border-radius: 24px;
+  position: fixed;
+  right: -200px;
+  bottom: 20px;
+  color: white;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.notifi i {
+  color: #6fc13c;
+  margin-right: 1em;
+}
