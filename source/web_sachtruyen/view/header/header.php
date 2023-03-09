@@ -1,6 +1,8 @@
 <?php
 // TODO $href_loggin = "link Login"
-$href_loggin = "#";
+// $href_loggin = "http://127.0.0.1/web_sachtruyen/view/login/login.php";
+// $href_profile = "http://127.0.0.1/web_sachtruyen/view/profile/profile.php";
+session_start();
 ?>
 <header>
     <div class="row header">
@@ -35,10 +37,29 @@ $href_loggin = "#";
                     </a>
                 </div>
                 <div class="col mt-5">
-                    <a href="<?php echo $href_loggin ?>" class="header-signin name">
-                        <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
-                        Đăng nhập
-                    </a>
+                    <?php
+                        if($_SESSION['id'] == NULL || !isset($_SESSION['id'])){
+                            echo'<a href="http://127.0.0.1/web_sachtruyen/view/login/login.php"class="header-signin name">
+                                <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
+                                Đăng nhập
+                            </a>';
+                        } else {        
+                            echo'
+                            <div>
+                                <span><img src="http://127.0.0.1/web_sachtruyen/images/header/icon-avt.png" alt=""></span>
+                            <div
+                            <div class="dropdown">
+                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        '.$_SESSION['username'].'
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="http://127.0.0.1/web_sachtruyen/view/profile/profile.php">Profile</a></li>
+                                    <li><a class="dropdown-item" href="http://127.0.0.1/web_sachtruyen/view/login/logout.php">Logout</a></li>
+            
+                                </ul>
+                                </div>';
+                        }
+                    ?>
                 </div>
             </div>
         </div>
