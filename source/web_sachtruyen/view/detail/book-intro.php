@@ -41,7 +41,8 @@
                 <div class="row book-control">
                     <div class="row control">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <a class="btn-green" href="<?= "/web_sachtruyen/view/chapter?id=" . $sach->id . "&chapId=" . $chuongs[0]->chiSo ?>">Đọc sách</a>
+                            <a class="btn-green" href="<?php if (!isset($_SESSION['id'])) echo "../login/login.php";
+                                                        else echo "/web_sachtruyen/view/chapter?id=" . $sach->id . "&chapId=" . $chuongs[0]->chiSo; ?>">Đọc sách</a>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <!-- <a id="add-book" class="btn-green" href="../../controller/addToBookCase.php?id=<?= $_GET['id'] ?>">Thêm vào tủ sách</a> -->

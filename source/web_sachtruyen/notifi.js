@@ -32,9 +32,7 @@ class Notifi {
 }
 const call = (url) => {
     return fetch(url).then((response) => response.status).then((status) => {
-        if (status !== 200)
-            return false;
-        return true;
+        return status;
     });
 }
 let submitBtns = document.querySelectorAll(".submit-btn");
@@ -42,12 +40,16 @@ submitBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
         e.preventDefault();
         let url = e.target.getAttribute("href");
-        call(url).then(bool => {
-            if (bool)
+        call(url).then(status => {
+            if (status==200)
                 new Notifi().show(e.target.getAttribute("alt")+" thành công!");
-            else {
+            else if(status==403){
                 new Notifi().show(e.target.getAttribute("alt")+" thất bại!", false);
+            }
+            else{
+                new Notifi().show("Chưa đăng nhập", false);
             }
         })
     })
 })
+

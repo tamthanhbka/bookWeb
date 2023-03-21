@@ -262,4 +262,25 @@ class BookCase
             return $like[0][0];
         return 0;
     }
+
+    public static function getListBooks($userId): array
+    {
+        $records = array();
+        $result = Database::getInstance()->query("SELECT SachID FROM tusach WHERE NguoiDungID = '$userId'");
+        foreach ($result as $item) {
+            $sach = Sach::findById($item[0]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
+    public static function getListFBooks($userId): array
+    {
+        $records = array();
+        $result = Database::getInstance()->query("SELECT SachID FROM muasach WHERE NguoiDungID = '$userId'");
+        foreach ($result as $item) {
+            $sach = Sach::findById($item[0]);
+            array_push($records, $sach);
+        }
+        return $records;
+    }
 }

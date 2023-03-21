@@ -1,6 +1,8 @@
 <?php
 // TODO $href_loggin = "link Login"
-$href_loggin = "#";
+// $href_loggin = "http://127.0.0.1/web_sachtruyen/view/login/login.php";
+// $href_profile = "http://127.0.0.1/web_sachtruyen/view/profile/profile.php";
+session_start();
 ?>
 <header>
     <div class="row header">
@@ -35,10 +37,40 @@ $href_loggin = "#";
                     </a>
                 </div>
                 <div class="col mt-5">
-                    <a href="<?php echo $href_loggin ?>" class="header-signin name">
-                        <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
-                        Đăng nhập
-                    </a>
+                    <?php
+                    if (!isset($_SESSION['id'])) {
+                        echo '<a href="http://127.0.0.1/web_sachtruyen/view/login/login.php"class="header-signin name">
+                                <img src="http://127.0.0.1/web_sachtruyen/images/header/icon-user.svg" alt="">
+                                Đăng nhập
+                            </a>';
+                    } else {
+                    ?>
+                        <!-- <div class="user-dropdown cursor-pointer">
+                            <div class="el-dropdown">
+                                <span class="el-dropdown-link el-dropdown-selfdefine " aria-haspopup="list" aria-controls="dropdown-menu-5472" role="button" tabindex="0">
+                                    <div class="w-max flex-row-center">
+                                        <div class="w-9 h-9 mr-1-5 rounded-full overflow-hidden">
+                                            <div class="overflow-hidden wh-full rounded-full">
+                                                <img src="https://cdn.vegaid.vn/cU0spbfh3B/20230308012518/204/d1a/c67/204d1ac678502b88ad53f1c1e103d8ac.jpg" alt="" class="object-cover wh-full lazyLoad isLoaded">
+                                            </div>
+                                        </div> 
+                                        <div class="w-max max-w-30">
+                                            <p class="text-sm-14-18 fm-t-ellipsis-1 text-black-222">Thái Nguyễn Bá</p>
+                                        </div></div> <i class="el-icon-caret-bottom el-icon--right el-icon-caret-bottom-cdv-color"></i></span> </div></div>
+                         <div> -->
+                        <div class="user-dropdown cursor-pointer">
+                            <img src="http://127.0.0.1/web_sachtruyen/images/icon/icon-avt.png" alt="" style="width: 15%;">
+                            <button class="el-dropdown-link el-dropdown-selfdefine " aria-haspopup="list" aria-controls="dropdown-menu-5472" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <?= $_SESSION['username'] ?>
+                            </button>
+                            <ul class="dropdown-menu overflow-hidden" webkit-appearance: none; tabindex="0" aria-expanded="false" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="http://127.0.0.1/web_sachtruyen/view/profile/profile.php">Profile</a></li>
+                                <li><a class="dropdown-item" href="http://127.0.0.1/web_sachtruyen/view/login/logout.php">Logout</a></li>
+                            </ul>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

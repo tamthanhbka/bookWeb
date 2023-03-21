@@ -101,6 +101,7 @@
   color: #38b334;
   background-color: #f2f8ee;
 }
+
 .addbook {
   text-align: center;
   background-color: #6dae43;
@@ -119,9 +120,4 @@
 
 .icon:hover {
   opacity: 1;
-}
-
-.status-1 {
-  background-color: #6dae43 !important;
-  color: blue !important;
 }

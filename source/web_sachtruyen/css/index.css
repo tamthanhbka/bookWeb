@@ -36,7 +36,7 @@
 
 .body {
   font-family: "Roboto", sans-serif;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #f1f1f1;
 }
 
 .type-book {
@@ -97,19 +97,6 @@
   padding: 2px 0;
 }
 
-.button-facebook-social {
-  margin-top: 1em;
-  padding: 1em;
-  background-color: #65b533;
-  border-radius: 30px;
-  box-shadow: 1px 2px 4px 2px #deedcf;
-}
-
-.button-facebook-social a {
-  color: white;
-  font-weight: 600;
-}
-
 .description {
   width: 120px;
   overflow: hidden;
@@ -119,4 +106,15 @@
   height: 75px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+.button-facebook-social {
+  margin-top: 1em;
+  padding: 1em;
+  background-color: #65b533;
+  border-radius: 30px;
+  box-shadow: 1px 2px 4px 2px #deedcf;
+}
+.button-facebook-social a {
+  color: white;
+  font-weight: 600;
 }

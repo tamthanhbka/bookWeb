@@ -72,11 +72,11 @@
                         TOP sách được yêu thích
                     </div>
                     <?php
-                        $sachs = Sach::getAllBooks();
-                        for ($i = 0; $i < 2; $i++) {
-                            $sach = $sachs[$i];
-                            include("view/book/recommendBooks.php");
-                        }
+                    $sachs = Sach::getAllBooks();
+                    for ($i = 0; $i < 2; $i++) {
+                        $sach = $sachs[$i];
+                        include("view/book/recommendBooks.php");
+                    }
                     ?>
                 </div>
             </div>

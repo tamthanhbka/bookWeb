@@ -125,29 +125,15 @@ section a {
 .status-hoanthanh {
   color: #ff3b30;
   background-color: #ffe2e0;
-  font-size: var(--font-size-sub);
-  padding: 2px 5px;
-  border-radius: 12px;
-  text-align: center;
-  line-height: 16px;
-  /* margin-top: 0.5em; */
-  width: 8em;
 }
 .status-dangra {
   color: #38b334;
   background-color: #f2f8ee;
-  font-size: var(--font-size-sub);
-  padding: 2px 5px;
-  border-radius: 12px;
-  text-align: center;
-  line-height: 16px;
-  /* margin-top: 0.5em; */
-  width: 8em;
 }
 
 .book-info .book-type a {
   background-color: #f1f1f1;
-  width: 12em;
+  width: 10em;
   text-align: center;
   font-size: var(--font-size-sub);
   border-radius: 12px;
@@ -356,7 +342,7 @@ section a {
   width: 95%;
 }
 
-.add-book-comment .submit-btn {
+.add-book-comment .submit-cmt-btn {
   width: 30%;
   margin-left: 70%;
   margin-top: 1rem;

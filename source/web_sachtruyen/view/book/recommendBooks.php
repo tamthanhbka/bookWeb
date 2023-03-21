@@ -1,7 +1,7 @@
 <?php
 //  $href_docsach = link den chi tiet sach
-    $href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
-    $like = BookCase::getLike($sach->id);
+$href_docsach = "../web_sachtruyen/view/detail/index.php?id=$sach->id";
+$like = BookCase::getLike($sach->id);
 ?>
 
 <div class="recommended-book col-6 py-3 rounded position-relative">
